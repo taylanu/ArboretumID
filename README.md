@@ -7,18 +7,18 @@
 - ArboretumID provides Penn State students, alumni, and visitors of any age the opportunity to explore the incredible collections of plants, flowers, and trees at the Penn State Arboretum in a whole new way!
 
 ### Features
-1. Home Tab: 
+Home Tab: 
 - Describes The Arboretum at Penn State and its Collections
 - Introduces ArborID application
 
-2. Explore Tab: 
+Explore Tab: 
 - Uses data from PlantFinder for Plant Attributes to build out Collections
     - Remotely loads images for plants, and provides an 'Image Coming Soon' for plants that do not yet have images available.
 - Shows all 11 Collections with Images at The Arboretum
 - Each Collection has Plants with Images
 - Each Plant has a DetailView showing Image, Name, Location, Taxon Name,  Family, Genus
 
-3. Capture Tab:
+Capture Tab:
 - Uses CoreML pre-trained model to detect and label plants as one of 5 types:
     - Daisy, Dandelion, Rose, Sunflower, Tulip
 - Provides users with 3 Capture Options:
@@ -26,12 +26,12 @@
 - Each capture option will return its prediction of what label to assign to an image, and its confidence percentage
 - In the future, more training data and labels can be added to the model to expand its capabilities
 
-4. Around Me Tab:
+Around Me Tab:
 - Provides a SwiftUI Map view of the Arboretum, with annotations on where plants are
 - Displayed annotations can be filtered by Collection
 - User Location Tracking is possible, but is currently disabled.
 
-5. Preferences Tab:
+Preferences Tab:
 - Preferences Tab is currently unused, in the future will be used to sign in to the arboretum, save favorite plants, etc.
 
 ### Collections/Areas at Arboretum:
