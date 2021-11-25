@@ -1,4 +1,4 @@
-#  ArborID: CMPSC475 Final Project Submission
+#  ArboretumID: CMPSC475 Final Project
 ## Taylan Unal (@taylanu)
 
 ### Features
@@ -42,10 +42,14 @@
 10. Rose and Fragrance Garden
 11. Strolling Garden
 
-### Sources:
+### Data Sources:
 - The Arboretum at Penn State: https://arboretum.psu.edu
 - The Arboretum at Penn State Plant Finder: https://datacommons.maps.arcgis.com/apps/webappviewer/index.html?id=88d9267530dc48db8635703130bb084e
 - Image Classification: https://github.com/DavidDuarte22/ImageClassification02
+
+### Code References:
+@DavidDuarte22 (AVFoundation & Classification) https://github.com/DavidDuarte22/ImageClassification02 
+@NigelGee (URLImage) https://www.hackingwithswift.com/forums/swiftui/loading-images/3292
 
 ### Bug Fixes:
 - Fix for the small window size, need to set a launchscreen in build settings: https://stackoverflow.com/questions/63195985/swiftui-view-being-rendered-in-small-window-instead-of-full-screen-when-using-xc
