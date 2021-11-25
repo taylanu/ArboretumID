@@ -2,8 +2,9 @@
 ## Taylan Unal (@taylanu)
 
 ### About ArboretumID
-ArboretumIdentifier (ArboretumID) is an app that enhances the Penn State Arboretum experience through AR and ML. Using the iPhone’s camera, ArborIdentifier scans the placard in front of any plant, and delivers rich details and descriptions about it. The app allows you to save plants to your collection, and even share your favorite snaps with friends! 
-ArboretumID provides Penn State students, alumni, and visitors of any age the opportunity to explore the incredible collections of plants, flowers, and trees at the Penn State Arboretum in a whole new way!
+- ArboretumIdentifier (ArboretumID) is an app that enhances the Penn State Arboretum experience through AR and ML. 
+- Using the iPhone’s camera, ArborIdentifier scans the placard in front of any plant, and delivers rich details and descriptions about it. 
+- ArboretumID provides Penn State students, alumni, and visitors of any age the opportunity to explore the incredible collections of plants, flowers, and trees at the Penn State Arboretum in a whole new way!
 
 ### Features
 1. Home Tab: 
