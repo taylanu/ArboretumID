@@ -28,7 +28,6 @@
 		E939C2E5273479DF00A7F02A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2D6273479DF00A7F02A /* HomeView.swift */; };
 		E939C2E927347A3B00A7F02A /* Regex Testing to Clean Data.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E939C2E727347A3B00A7F02A /* Regex Testing to Clean Data.pdf */; };
 		E939C2EA27347A3B00A7F02A /* arboretumData.json in Resources */ = {isa = PBXBuildFile; fileRef = E939C2E827347A3B00A7F02A /* arboretumData.json */; };
-		E939C2EC27347A4200A7F02A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E939C2EB27347A4200A7F02A /* README.md */; };
 		E939C2EE27347A4A00A7F02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E939C2ED27347A4A00A7F02A /* Assets.xcassets */; };
 		E939C2F227347A4E00A7F02A /* FlowersRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F027347A4E00A7F02A /* FlowersRecognition.mlmodel */; };
 		E939C2F327347A4E00A7F02A /* PlantsPlacardsModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F127347A4E00A7F02A /* PlantsPlacardsModel.mlmodel */; };
@@ -38,7 +37,6 @@
 		E939C2FD27347A5A00A7F02A /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F827347A5900A7F02A /* URLImage.swift */; };
 		E939C2FE27347A5A00A7F02A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F927347A5900A7F02A /* LocationManager.swift */; };
 		E939C30227348BD500A7F02A /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C30127348BD500A7F02A /* VideoController.swift */; };
-		E9CE498A2750428A00109467 /* ArboretumID.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E9CE49892750428A00109467 /* ArboretumID.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +81,6 @@
 		E939C2D6273479DF00A7F02A /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E939C2E727347A3B00A7F02A /* Regex Testing to Clean Data.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Regex Testing to Clean Data.pdf"; sourceTree = "<group>"; };
 		E939C2E827347A3B00A7F02A /* arboretumData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = arboretumData.json; sourceTree = "<group>"; };
-		E939C2EB27347A4200A7F02A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E939C2ED27347A4A00A7F02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Documents/CMPSC475/Final Project/ArborID/ArborID/Assets.xcassets"; sourceTree = "<group>"; };
 		E939C2F027347A4E00A7F02A /* FlowersRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowersRecognition.mlmodel; sourceTree = "<group>"; };
 		E939C2F127347A4E00A7F02A /* PlantsPlacardsModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantsPlacardsModel.mlmodel; sourceTree = "<group>"; };
@@ -93,7 +90,8 @@
 		E939C2F827347A5900A7F02A /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		E939C2F927347A5900A7F02A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E939C30127348BD500A7F02A /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
-		E9CE49892750428A00109467 /* ArboretumID.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ArboretumID.pdf; sourceTree = "<group>"; };
+		E9CE498B2750440800109467 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		E9CE498C2750441D00109467 /* ArboretumID.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ArboretumID.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +125,8 @@
 				E939C2922734787000A7F02A /* ArboretumID */,
 				E939C2A32734787100A7F02A /* ArboretumIDTests */,
 				E939C2AD2734787100A7F02A /* ArboretumIDUITests */,
+				E9CE498B2750440800109467 /* README.md */,
+				E9CE498C2750441D00109467 /* ArboretumID.pdf */,
 				E939C2912734787000A7F02A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,8 +150,6 @@
 				E939C2BF273479C200A7F02A /* Views */,
 				E939C2932734787000A7F02A /* ArboretumIDApp.swift */,
 				E939C2ED27347A4A00A7F02A /* Assets.xcassets */,
-				E939C2EB27347A4200A7F02A /* README.md */,
-				E9CE49892750428A00109467 /* ArboretumID.pdf */,
 			);
 			path = ArboretumID;
 			sourceTree = "<group>";
@@ -395,9 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E939C2E927347A3B00A7F02A /* Regex Testing to Clean Data.pdf in Resources */,
-				E9CE498A2750428A00109467 /* ArboretumID.pdf in Resources */,
 				E939C2EA27347A3B00A7F02A /* arboretumData.json in Resources */,
-				E939C2EC27347A4200A7F02A /* README.md in Resources */,
 				E939C2EE27347A4A00A7F02A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
