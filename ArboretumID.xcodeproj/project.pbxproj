@@ -8,12 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		E939C2942734787000A7F02A /* ArboretumIDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2932734787000A7F02A /* ArboretumIDApp.swift */; };
-		E939C2962734787000A7F02A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2952734787000A7F02A /* ContentView.swift */; };
-		E939C2982734787100A7F02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E939C2972734787100A7F02A /* Assets.xcassets */; };
 		E939C29B2734787100A7F02A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E939C29A2734787100A7F02A /* Preview Assets.xcassets */; };
 		E939C2A52734787100A7F02A /* ArboretumIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2A42734787100A7F02A /* ArboretumIDTests.swift */; };
 		E939C2AF2734787100A7F02A /* ArboretumIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2AE2734787100A7F02A /* ArboretumIDUITests.swift */; };
 		E939C2B12734787100A7F02A /* ArboretumIDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2B02734787100A7F02A /* ArboretumIDUITestsLaunchTests.swift */; };
+		E939C2D7273479DF00A7F02A /* AVCaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2C2273479DF00A7F02A /* AVCaptureController.swift */; };
+		E939C2D8273479DF00A7F02A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2C4273479DF00A7F02A /* ImagePicker.swift */; };
+		E939C2D9273479DF00A7F02A /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2C6273479DF00A7F02A /* VideoCapture.swift */; };
+		E939C2DA273479DF00A7F02A /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2C7273479DF00A7F02A /* CaptureView.swift */; };
+		E939C2DB273479DF00A7F02A /* CollectionHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2C9273479DF00A7F02A /* CollectionHomeView.swift */; };
+		E939C2DC273479DF00A7F02A /* CollectionGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2CA273479DF00A7F02A /* CollectionGridItem.swift */; };
+		E939C2DD273479DF00A7F02A /* PlantGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2CB273479DF00A7F02A /* PlantGridItem.swift */; };
+		E939C2DE273479DF00A7F02A /* PlantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2CC273479DF00A7F02A /* PlantDetailView.swift */; };
+		E939C2DF273479DF00A7F02A /* CollectionGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2CD273479DF00A7F02A /* CollectionGridView.swift */; };
+		E939C2E0273479DF00A7F02A /* ArboretumMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2CF273479DF00A7F02A /* ArboretumMap.swift */; };
+		E939C2E1273479DF00A7F02A /* AnnotationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2D0273479DF00A7F02A /* AnnotationsView.swift */; };
+		E939C2E2273479DF00A7F02A /* ArboretumMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2D1273479DF00A7F02A /* ArboretumMapView.swift */; };
+		E939C2E3273479DF00A7F02A /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2D3273479DF00A7F02A /* PreferencesView.swift */; };
+		E939C2E4273479DF00A7F02A /* ArborIDMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2D4273479DF00A7F02A /* ArborIDMainView.swift */; };
+		E939C2E5273479DF00A7F02A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2D6273479DF00A7F02A /* HomeView.swift */; };
+		E939C2E927347A3B00A7F02A /* Regex Testing to Clean Data.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E939C2E727347A3B00A7F02A /* Regex Testing to Clean Data.pdf */; };
+		E939C2EA27347A3B00A7F02A /* arboretumData.json in Resources */ = {isa = PBXBuildFile; fileRef = E939C2E827347A3B00A7F02A /* arboretumData.json */; };
+		E939C2EC27347A4200A7F02A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E939C2EB27347A4200A7F02A /* README.md */; };
+		E939C2EE27347A4A00A7F02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E939C2ED27347A4A00A7F02A /* Assets.xcassets */; };
+		E939C2F227347A4E00A7F02A /* FlowersRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F027347A4E00A7F02A /* FlowersRecognition.mlmodel */; };
+		E939C2F327347A4E00A7F02A /* PlantsPlacardsModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F127347A4E00A7F02A /* PlantsPlacardsModel.mlmodel */; };
+		E939C2FA27347A5A00A7F02A /* PlantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F527347A5900A7F02A /* PlantManager.swift */; };
+		E939C2FB27347A5A00A7F02A /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F627347A5900A7F02A /* Plant.swift */; };
+		E939C2FC27347A5A00A7F02A /* Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F727347A5900A7F02A /* Classification.swift */; };
+		E939C2FD27347A5A00A7F02A /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F827347A5900A7F02A /* URLImage.swift */; };
+		E939C2FE27347A5A00A7F02A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F927347A5900A7F02A /* LocationManager.swift */; };
+		E939C30227348BD500A7F02A /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C30127348BD500A7F02A /* VideoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +61,39 @@
 /* Begin PBXFileReference section */
 		E939C2902734787000A7F02A /* ArboretumID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArboretumID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E939C2932734787000A7F02A /* ArboretumIDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArboretumIDApp.swift; sourceTree = "<group>"; };
-		E939C2952734787000A7F02A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E939C2972734787100A7F02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E939C29A2734787100A7F02A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E939C2A02734787100A7F02A /* ArboretumIDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArboretumIDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E939C2A42734787100A7F02A /* ArboretumIDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArboretumIDTests.swift; sourceTree = "<group>"; };
 		E939C2AA2734787100A7F02A /* ArboretumIDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArboretumIDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E939C2AE2734787100A7F02A /* ArboretumIDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArboretumIDUITests.swift; sourceTree = "<group>"; };
 		E939C2B02734787100A7F02A /* ArboretumIDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArboretumIDUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E939C2C2273479DF00A7F02A /* AVCaptureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCaptureController.swift; sourceTree = "<group>"; };
+		E939C2C4273479DF00A7F02A /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E939C2C6273479DF00A7F02A /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		E939C2C7273479DF00A7F02A /* CaptureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
+		E939C2C9273479DF00A7F02A /* CollectionHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHomeView.swift; sourceTree = "<group>"; };
+		E939C2CA273479DF00A7F02A /* CollectionGridItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionGridItem.swift; sourceTree = "<group>"; };
+		E939C2CB273479DF00A7F02A /* PlantGridItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantGridItem.swift; sourceTree = "<group>"; };
+		E939C2CC273479DF00A7F02A /* PlantDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantDetailView.swift; sourceTree = "<group>"; };
+		E939C2CD273479DF00A7F02A /* CollectionGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionGridView.swift; sourceTree = "<group>"; };
+		E939C2CF273479DF00A7F02A /* ArboretumMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArboretumMap.swift; sourceTree = "<group>"; };
+		E939C2D0273479DF00A7F02A /* AnnotationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationsView.swift; sourceTree = "<group>"; };
+		E939C2D1273479DF00A7F02A /* ArboretumMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArboretumMapView.swift; sourceTree = "<group>"; };
+		E939C2D3273479DF00A7F02A /* PreferencesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		E939C2D4273479DF00A7F02A /* ArborIDMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArborIDMainView.swift; sourceTree = "<group>"; };
+		E939C2D6273479DF00A7F02A /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E939C2E727347A3B00A7F02A /* Regex Testing to Clean Data.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Regex Testing to Clean Data.pdf"; sourceTree = "<group>"; };
+		E939C2E827347A3B00A7F02A /* arboretumData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = arboretumData.json; sourceTree = "<group>"; };
+		E939C2EB27347A4200A7F02A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E939C2ED27347A4A00A7F02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Documents/CMPSC475/Final Project/ArborID/ArborID/Assets.xcassets"; sourceTree = "<group>"; };
+		E939C2F027347A4E00A7F02A /* FlowersRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowersRecognition.mlmodel; sourceTree = "<group>"; };
+		E939C2F127347A4E00A7F02A /* PlantsPlacardsModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlantsPlacardsModel.mlmodel; sourceTree = "<group>"; };
+		E939C2F527347A5900A7F02A /* PlantManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantManager.swift; sourceTree = "<group>"; };
+		E939C2F627347A5900A7F02A /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		E939C2F727347A5900A7F02A /* Classification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classification.swift; sourceTree = "<group>"; };
+		E939C2F827347A5900A7F02A /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		E939C2F927347A5900A7F02A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		E939C30127348BD500A7F02A /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +144,13 @@
 		E939C2922734787000A7F02A /* ArboretumID */ = {
 			isa = PBXGroup;
 			children = (
+				E939C2F427347A5900A7F02A /* Models */,
+				E939C2EF27347A4E00A7F02A /* ImageClassifiers */,
+				E939C2ED27347A4A00A7F02A /* Assets.xcassets */,
+				E939C2EB27347A4200A7F02A /* README.md */,
+				E939C2E627347A3A00A7F02A /* Data */,
+				E939C2BF273479C200A7F02A /* Views */,
 				E939C2932734787000A7F02A /* ArboretumIDApp.swift */,
-				E939C2952734787000A7F02A /* ContentView.swift */,
-				E939C2972734787100A7F02A /* Assets.xcassets */,
 				E939C2992734787100A7F02A /* Preview Content */,
 			);
 			path = ArboretumID;
@@ -125,6 +179,123 @@
 				E939C2B02734787100A7F02A /* ArboretumIDUITestsLaunchTests.swift */,
 			);
 			path = ArboretumIDUITests;
+			sourceTree = "<group>";
+		};
+		E939C2BF273479C200A7F02A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2D4273479DF00A7F02A /* ArborIDMainView.swift */,
+				E939C2C0273479DF00A7F02A /* CaptureView */,
+				E939C2C8273479DF00A7F02A /* CollectionView */,
+				E939C2D5273479DF00A7F02A /* HomeView */,
+				E939C2CE273479DF00A7F02A /* MapView */,
+				E939C2D2273479DF00A7F02A /* PreferencesView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E939C2C0273479DF00A7F02A /* CaptureView */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2C1273479DF00A7F02A /* AVCapture */,
+				E939C2C7273479DF00A7F02A /* CaptureView.swift */,
+			);
+			path = CaptureView;
+			sourceTree = "<group>";
+		};
+		E939C2C1273479DF00A7F02A /* AVCapture */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2C2273479DF00A7F02A /* AVCaptureController.swift */,
+				E939C2C3273479DF00A7F02A /* Image */,
+				E939C2C5273479DF00A7F02A /* Live */,
+				E939C30127348BD500A7F02A /* VideoController.swift */,
+			);
+			path = AVCapture;
+			sourceTree = "<group>";
+		};
+		E939C2C3273479DF00A7F02A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2C4273479DF00A7F02A /* ImagePicker.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		E939C2C5273479DF00A7F02A /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2C6273479DF00A7F02A /* VideoCapture.swift */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		E939C2C8273479DF00A7F02A /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2C9273479DF00A7F02A /* CollectionHomeView.swift */,
+				E939C2CA273479DF00A7F02A /* CollectionGridItem.swift */,
+				E939C2CB273479DF00A7F02A /* PlantGridItem.swift */,
+				E939C2CC273479DF00A7F02A /* PlantDetailView.swift */,
+				E939C2CD273479DF00A7F02A /* CollectionGridView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		E939C2CE273479DF00A7F02A /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2CF273479DF00A7F02A /* ArboretumMap.swift */,
+				E939C2D0273479DF00A7F02A /* AnnotationsView.swift */,
+				E939C2D1273479DF00A7F02A /* ArboretumMapView.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		E939C2D2273479DF00A7F02A /* PreferencesView */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2D3273479DF00A7F02A /* PreferencesView.swift */,
+			);
+			path = PreferencesView;
+			sourceTree = "<group>";
+		};
+		E939C2D5273479DF00A7F02A /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2D6273479DF00A7F02A /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		E939C2E627347A3A00A7F02A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2E727347A3B00A7F02A /* Regex Testing to Clean Data.pdf */,
+				E939C2E827347A3B00A7F02A /* arboretumData.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E939C2EF27347A4E00A7F02A /* ImageClassifiers */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2F027347A4E00A7F02A /* FlowersRecognition.mlmodel */,
+				E939C2F127347A4E00A7F02A /* PlantsPlacardsModel.mlmodel */,
+			);
+			path = ImageClassifiers;
+			sourceTree = "<group>";
+		};
+		E939C2F427347A5900A7F02A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E939C2F527347A5900A7F02A /* PlantManager.swift */,
+				E939C2F627347A5900A7F02A /* Plant.swift */,
+				E939C2F727347A5900A7F02A /* Classification.swift */,
+				E939C2F827347A5900A7F02A /* URLImage.swift */,
+				E939C2F927347A5900A7F02A /* LocationManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +402,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E939C2E927347A3B00A7F02A /* Regex Testing to Clean Data.pdf in Resources */,
+				E939C2EA27347A3B00A7F02A /* arboretumData.json in Resources */,
+				E939C2EC27347A4200A7F02A /* README.md in Resources */,
 				E939C29B2734787100A7F02A /* Preview Assets.xcassets in Resources */,
-				E939C2982734787100A7F02A /* Assets.xcassets in Resources */,
+				E939C2EE27347A4A00A7F02A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +431,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E939C2962734787000A7F02A /* ContentView.swift in Sources */,
+				E939C2DB273479DF00A7F02A /* CollectionHomeView.swift in Sources */,
+				E939C2DF273479DF00A7F02A /* CollectionGridView.swift in Sources */,
+				E939C2FD27347A5A00A7F02A /* URLImage.swift in Sources */,
+				E939C2F227347A4E00A7F02A /* FlowersRecognition.mlmodel in Sources */,
+				E939C30227348BD500A7F02A /* VideoController.swift in Sources */,
+				E939C2FB27347A5A00A7F02A /* Plant.swift in Sources */,
+				E939C2F327347A4E00A7F02A /* PlantsPlacardsModel.mlmodel in Sources */,
+				E939C2E4273479DF00A7F02A /* ArborIDMainView.swift in Sources */,
+				E939C2DD273479DF00A7F02A /* PlantGridItem.swift in Sources */,
+				E939C2FA27347A5A00A7F02A /* PlantManager.swift in Sources */,
+				E939C2FC27347A5A00A7F02A /* Classification.swift in Sources */,
+				E939C2E5273479DF00A7F02A /* HomeView.swift in Sources */,
+				E939C2E1273479DF00A7F02A /* AnnotationsView.swift in Sources */,
+				E939C2D9273479DF00A7F02A /* VideoCapture.swift in Sources */,
+				E939C2D8273479DF00A7F02A /* ImagePicker.swift in Sources */,
+				E939C2DC273479DF00A7F02A /* CollectionGridItem.swift in Sources */,
 				E939C2942734787000A7F02A /* ArboretumIDApp.swift in Sources */,
+				E939C2E0273479DF00A7F02A /* ArboretumMap.swift in Sources */,
+				E939C2E3273479DF00A7F02A /* PreferencesView.swift in Sources */,
+				E939C2D7273479DF00A7F02A /* AVCaptureController.swift in Sources */,
+				E939C2FE27347A5A00A7F02A /* LocationManager.swift in Sources */,
+				E939C2E2273479DF00A7F02A /* ArboretumMapView.swift in Sources */,
+				E939C2DA273479DF00A7F02A /* CaptureView.swift in Sources */,
+				E939C2DE273479DF00A7F02A /* PlantDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +528,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -346,10 +542,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_FILE = /Users/taylanu/Desktop/ArboretumID/ArboretumID/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = ArboretumID;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -393,7 +591,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -401,9 +599,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_FILE = /Users/taylanu/Desktop/ArboretumID/ArboretumID/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = ArboretumID;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -422,11 +622,19 @@
 				DEVELOPMENT_TEAM = A7W8G9KD9F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take pictures of plants and placards at the Arboretum";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Provides User's Location on Map of Arboretum, displays plants in the area.";
+				INFOPLIST_KEY_NSMainNibFile = ArboretumIDApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = ArborIDIcon;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,11 +659,19 @@
 				DEVELOPMENT_TEAM = A7W8G9KD9F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take pictures of plants and placards at the Arboretum";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Provides User's Location on Map of Arboretum, displays plants in the area.";
+				INFOPLIST_KEY_NSMainNibFile = ArboretumIDApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = ArborIDIcon;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
