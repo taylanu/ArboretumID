@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E939C2942734787000A7F02A /* ArboretumIDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2932734787000A7F02A /* ArboretumIDApp.swift */; };
-		E939C29B2734787100A7F02A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E939C29A2734787100A7F02A /* Preview Assets.xcassets */; };
 		E939C2A52734787100A7F02A /* ArboretumIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2A42734787100A7F02A /* ArboretumIDTests.swift */; };
 		E939C2AF2734787100A7F02A /* ArboretumIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2AE2734787100A7F02A /* ArboretumIDUITests.swift */; };
 		E939C2B12734787100A7F02A /* ArboretumIDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2B02734787100A7F02A /* ArboretumIDUITestsLaunchTests.swift */; };
@@ -39,6 +38,7 @@
 		E939C2FD27347A5A00A7F02A /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F827347A5900A7F02A /* URLImage.swift */; };
 		E939C2FE27347A5A00A7F02A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C2F927347A5900A7F02A /* LocationManager.swift */; };
 		E939C30227348BD500A7F02A /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939C30127348BD500A7F02A /* VideoController.swift */; };
+		E9CE498A2750428A00109467 /* ArboretumID.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E9CE49892750428A00109467 /* ArboretumID.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,6 @@
 /* Begin PBXFileReference section */
 		E939C2902734787000A7F02A /* ArboretumID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArboretumID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E939C2932734787000A7F02A /* ArboretumIDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArboretumIDApp.swift; sourceTree = "<group>"; };
-		E939C29A2734787100A7F02A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E939C2A02734787100A7F02A /* ArboretumIDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArboretumIDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E939C2A42734787100A7F02A /* ArboretumIDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArboretumIDTests.swift; sourceTree = "<group>"; };
 		E939C2AA2734787100A7F02A /* ArboretumIDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArboretumIDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +93,7 @@
 		E939C2F827347A5900A7F02A /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		E939C2F927347A5900A7F02A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E939C30127348BD500A7F02A /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
+		E9CE49892750428A00109467 /* ArboretumID.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ArboretumID.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,22 +146,14 @@
 			children = (
 				E939C2F427347A5900A7F02A /* Models */,
 				E939C2EF27347A4E00A7F02A /* ImageClassifiers */,
-				E939C2ED27347A4A00A7F02A /* Assets.xcassets */,
-				E939C2EB27347A4200A7F02A /* README.md */,
 				E939C2E627347A3A00A7F02A /* Data */,
 				E939C2BF273479C200A7F02A /* Views */,
 				E939C2932734787000A7F02A /* ArboretumIDApp.swift */,
-				E939C2992734787100A7F02A /* Preview Content */,
+				E939C2ED27347A4A00A7F02A /* Assets.xcassets */,
+				E939C2EB27347A4200A7F02A /* README.md */,
+				E9CE49892750428A00109467 /* ArboretumID.pdf */,
 			);
 			path = ArboretumID;
-			sourceTree = "<group>";
-		};
-		E939C2992734787100A7F02A /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E939C29A2734787100A7F02A /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		E939C2A32734787100A7F02A /* ArboretumIDTests */ = {
@@ -403,9 +395,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E939C2E927347A3B00A7F02A /* Regex Testing to Clean Data.pdf in Resources */,
+				E9CE498A2750428A00109467 /* ArboretumID.pdf in Resources */,
 				E939C2EA27347A3B00A7F02A /* arboretumData.json in Resources */,
 				E939C2EC27347A4200A7F02A /* README.md in Resources */,
-				E939C29B2734787100A7F02A /* Preview Assets.xcassets in Resources */,
 				E939C2EE27347A4A00A7F02A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
