@@ -1,12 +1,17 @@
+
+![ArborIDIcon](ArborIDIcon-320.png)
+
 #  ArboretumID: CMPSC475 Final Project
 ## Taylan Unal (@taylanu)
 
-### About ArboretumID
+
+## **About ArboretumID**
 - ArboretumIdentifier (ArboretumID) is an app that enhances the Penn State Arboretum experience through AR and ML. 
 - Using the iPhone’s camera, ArborIdentifier scans the placard in front of any plant, and delivers rich details and descriptions about it. 
 - ArboretumID provides Penn State students, alumni, and visitors of any age the opportunity to explore the incredible collections of plants, flowers, and trees at the Penn State Arboretum in a whole new way!
 
-### Features
+
+## Features
 Home Tab: 
 - Describes The Arboretum at Penn State and its Collections
 - Introduces ArborID application
@@ -34,7 +39,7 @@ Around Me Tab:
 Preferences Tab:
 - Preferences Tab is currently unused, in the future will be used to sign in to the arboretum, save favorite plants, etc.
 
-### Collections/Areas at Arboretum:
+## Collections/Areas at Arboretum:
 1. Children's Garden
 2. Event Lawn
 3. Fountain Garden
@@ -47,14 +52,22 @@ Preferences Tab:
 10. Rose and Fragrance Garden
 11. Strolling Garden
 
-### Data Sources:
+
+## Bug Fixes:
+- Fix for the small window size, need to set a launchscreen in build settings: 
+    - https://stackoverflow.com/questions/63195985/swiftui-view-being-rendered-in-small-window-instead-of-full-screen-when-using-xc
+
+## TODO
+- [x] Welcome screen
+- [x] 
+- [ ] File information sidebar
+
+
+## Data Sources:
 - The Arboretum at Penn State: https://arboretum.psu.edu
 - The Arboretum at Penn State Plant Finder: https://datacommons.maps.arcgis.com/apps/webappviewer/index.html?id=88d9267530dc48db8635703130bb084e
 - Image Classification: https://github.com/DavidDuarte22/ImageClassification02
 
-### Code References:
+## References:
 @DavidDuarte22 (AVFoundation & Classification) https://github.com/DavidDuarte22/ImageClassification02 
 @NigelGee (URLImage) https://www.hackingwithswift.com/forums/swiftui/loading-images/3292
-
-### Bug Fixes:
-- Fix for the small window size, need to set a launchscreen in build settings: https://stackoverflow.com/questions/63195985/swiftui-view-being-rendered-in-small-window-instead-of-full-screen-when-using-xc
