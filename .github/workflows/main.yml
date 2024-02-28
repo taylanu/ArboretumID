@@ -26,10 +26,19 @@ jobs:
           API_URL_VIEWS="https://api.github.com/repos/${{ github.repository }}/traffic/views"
           AUTH_HEADER="Authorization: token ${{ secrets.PAT }}"
           mkdir -p traffic_data
-          curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}" > traffic_data/clones.json
-          curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}" > traffic_data/top_paths.json
-          curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}" > traffic_data/top_referrers.json
-          curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}" > traffic_data/views.json
+          # curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}" > traffic_data/clones.json
+          # curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}" > traffic_data/top_paths.json
+          # curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}" > traffic_data/top_referrers.json
+          # curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}" > traffic_data/views.json
+          # For the past 14 days, write a file with Date Timestamp
+          for i in {0..13}; do
+            DATE=$(date -d "$i days ago" +%Y-%m-%d)
+            curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}?per=day&timestamp=${DATE}" > "traffic_data/clones_${DATE}.json"
+            curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}?per=day&timestamp=${DATE}" > "traffic_data/top_paths_${DATE}.json"
+            curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}?per=day&timestamp=${DATE}" > "traffic_data/top_referrers_${DATE}.json"
+            curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}?per=day&timestamp=${DATE}" > "traffic_data/views_${DATE}.json"
+          done
+
       
       - name: Debug - Check contents of traffic_data directory
         run: |
