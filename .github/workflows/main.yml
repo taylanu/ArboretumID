@@ -33,7 +33,11 @@ jobs:
           mv clones.json top_paths.json top_referrers.json views.json traffic_data/
 
       - name: Display traffic data
-        run: cat traffic.json
+        run: |
+          cat clones.json
+          cat top_paths.json
+          cat top_referrers.json
+          cat views.json
 
       # - name: Save traffic data to artifacts
       #   if: always()
