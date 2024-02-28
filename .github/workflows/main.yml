@@ -21,7 +21,7 @@ jobs:
           API_URL_TOP_PATHS="https://api.github.com/repos/${{ github.repository }}/traffic/popular/paths"
           API_URL_TOP_REFERRERS="https://api.github.com/repos/${{ github.repository }}/traffic/popular/referrers"
           API_URL_VIEWS="https://api.github.com/repos/${{ github.repository }}/traffic/views"
-          AUTH_HEADER="Authorization: token ${{ secrets.GITHUB_TOKEN }}"
+          AUTH_HEADER="Authorization: token ${{ secrets.PAT }}"
           curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}" > clones.json
           curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}" > top_paths.json
           curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}" > top_referrers.json
