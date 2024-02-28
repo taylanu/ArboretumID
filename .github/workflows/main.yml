@@ -33,14 +33,28 @@ jobs:
       
       - name: Debug - Check contents of traffic_data directory
         run: |
+          ls
           ls -l traffic_data
           cat traffic_data/*.json
+      
+      # Github Commit Changed Files
+      # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html#git-commands
+      - name: GIT commit and push docs
+        env: 
+          CI_COMMIT_MESSAGE: Add Traffic Data
+          CI_COMMIT_AUTHOR: taylanu
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "${{ env.CI_COMMIT_AUTHOR }}@users.noreply.github.com"
+          git add traffic_data
+          git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git push
 
-      - name: Commit and push changes
-        uses: ad-m/github-push-action@v0.8.0
-        with:
-          # Valid Inputs: ['github_token', 'github_url', 'ssh', 'repository', 'branch', 'force', 'force_with_lease', 'atomic', 'tags', 'directory']
-          github_token: ${{ secrets.PAT }}
-          repository: ${{ github.repository }}
-          branch: main
-          directory: traffic_data
+      # - name: Commit and push changes
+      #   uses: ad-m/github-push-action@v0.8.0
+      #   with:
+      #     # Valid Inputs: ['github_token', 'github_url', 'ssh', 'repository', 'branch', 'force', 'force_with_lease', 'atomic', 'tags', 'directory']
+      #     github_token: ${{ secrets.PAT }}
+      #     repository: ${{ github.repository }}
+      #     branch: main
+      #     directory: traffic_data
