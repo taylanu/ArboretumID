@@ -1,6 +1,8 @@
 name: Fetch GitHub Traffic Data
 
 on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight UTC
   push:
     branches:
       - main
