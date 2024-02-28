@@ -38,5 +38,6 @@ jobs:
         with:
           # Valid Inputs: ['github_token', 'github_url', 'ssh', 'repository', 'branch', 'force', 'force_with_lease', 'atomic', 'tags', 'directory']
           github_token: ${{ secrets.PAT }}
-          branch: main
+          repository: ${{ github.repository }}
+          branch: traffic
           directory: traffic_data
