@@ -22,26 +22,16 @@ jobs:
           API_URL_TOP_REFERRERS="https://api.github.com/repos/${{ github.repository }}/traffic/popular/referrers"
           API_URL_VIEWS="https://api.github.com/repos/${{ github.repository }}/traffic/views"
           AUTH_HEADER="Authorization: token ${{ secrets.PAT }}"
-          curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}" > clones.json
-          curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}" > top_paths.json
-          curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}" > top_referrers.json
-          curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}" > views.json
-
-      - name: Move JSON files to repository
-        run: |
           mkdir -p traffic_data
-          mv clones.json top_paths.json top_referrers.json views.json traffic_data/
+          curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}" > traffic_data/clones.json
+          curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}" > traffic_data/top_paths.json
+          curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}" > traffic_data/top_referrers.json
+          curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}" > traffic_data/views.json
 
-      - name: Display traffic data
-        run: |
-          cat clones.json
-          cat top_paths.json
-          cat top_referrers.json
-          cat views.json
-
-      # - name: Save traffic data to artifacts
-      #   if: always()
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: traffic-data
-      #     path: traffic.json
+      - name: Commit and push changes
+        uses: ad-m/github-push-action@v0.7.0
+        with:
+          github_token: ${{ secrets.PAT }}
+          branch: main
+          directory: traffic_data
+          message: Update traffic data
