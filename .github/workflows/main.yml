@@ -14,6 +14,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check contents of current directory
+        run: ls
+
       - name: Fetch traffic data
         id: traffic
         run: |
@@ -39,5 +42,5 @@ jobs:
           # Valid Inputs: ['github_token', 'github_url', 'ssh', 'repository', 'branch', 'force', 'force_with_lease', 'atomic', 'tags', 'directory']
           github_token: ${{ secrets.PAT }}
           repository: ${{ github.repository }}
-          branch: traffic
+          branch: main
           directory: traffic_data
