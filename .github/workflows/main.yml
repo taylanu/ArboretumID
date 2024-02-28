@@ -1,0 +1,41 @@
+name: Fetch GitHub Traffic Data
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  fetch-traffic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch traffic data
+        id: traffic
+        run: |
+          API_URL_CLONES="https://api.github.com/repos/${{ github.repository }}/traffic/clones"
+          API_URL_TOP_PATHS="https://api.github.com/repos/${{ github.repository }}/traffic/popular/paths"
+          API_URL_TOP_REFERRERS="https://api.github.com/repos/${{ github.repository }}/traffic/popular/referrers"
+          API_URL_VIEWS="https://api.github.com/repos/${{ github.repository }}/traffic/views"
+          AUTH_HEADER="Authorization: token ${{ secrets.GITHUB_TOKEN }}"
+          curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}" > clones.json
+          curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}" > top_paths.json
+          curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}" > top_referrers.json
+          curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}" > views.json
+
+      - name: Move JSON files to repository
+        run: |
+          mkdir -p traffic_data
+          mv clones.json top_paths.json top_referrers.json views.json traffic_data/
+
+      - name: Display traffic data
+        run: cat traffic.json
+
+      # - name: Save traffic data to artifacts
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: traffic-data
+      #     path: traffic.json
