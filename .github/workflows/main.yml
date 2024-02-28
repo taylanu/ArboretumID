@@ -27,6 +27,11 @@ jobs:
           curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}" > traffic_data/top_paths.json
           curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}" > traffic_data/top_referrers.json
           curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}" > traffic_data/views.json
+      
+      - name: Debug - Check contents of traffic_data directory
+        run: |
+          ls -l traffic_data
+          cat traffic_data/*.json
 
       - name: Commit and push changes
         uses: ad-m/github-push-action@v0.8.0
@@ -35,4 +40,3 @@ jobs:
           github_token: ${{ secrets.PAT }}
           branch: main
           directory: traffic_data
-          # message: Update traffic data
