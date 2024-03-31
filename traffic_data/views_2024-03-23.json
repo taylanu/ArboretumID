@@ -1,7 +1,4 @@
 {
-  "count": 0,
-  "uniques": 0,
-  "views": [
-
-  ]
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest"
 }
