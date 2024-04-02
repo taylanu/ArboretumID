@@ -1,9 +1,9 @@
-name: Fetch GitHub Traffic Data - taylanu
+name: Fetch GitHub Traffic Data - taylanu (2024.03.25)
 
 on:
   schedule:
     # - cron: '0 0 * * *'  # Runs every day at midnight UTC
-    - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC
+    - cron: "0 0 * * 0" # Runs every Sunday at midnight UTC
   push:
     branches:
       - main
@@ -11,59 +11,129 @@ on:
 jobs:
   fetch-traffic:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo_name: [
+            "taylauna/ArboretumID",
+            # "aws-samples/amazon-q-in-connect-s3-integration-template",
+          ] # Add more repositories as needed
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check contents of current directory
-        run: ls
-
-      - name: Fetch traffic data
+      - name: Fetch traffic data for each Repo
         id: traffic
         run: |
-          API_URL_CLONES="https://api.github.com/repos/${{ github.repository }}/traffic/clones"
-          API_URL_TOP_PATHS="https://api.github.com/repos/${{ github.repository }}/traffic/popular/paths"
-          API_URL_TOP_REFERRERS="https://api.github.com/repos/${{ github.repository }}/traffic/popular/referrers"
-          API_URL_VIEWS="https://api.github.com/repos/${{ github.repository }}/traffic/views"
           AUTH_HEADER="Authorization: token ${{ secrets.PAT }}"
-          mkdir -p traffic_data
-          # curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}" > traffic_data/clones.json
-          # curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}" > traffic_data/top_paths.json
-          # curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}" > traffic_data/top_referrers.json
-          # curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}" > traffic_data/views.json
-          # For the past 14 days, write a file with Date Timestamp
-          for i in {0..13}; do
-            DATE=$(date -d "$i days ago" +%Y-%m-%d)
-            curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}?per=day&timestamp=${DATE}" > "traffic_data/clones_${DATE}.json"
-            curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}?per=day&timestamp=${DATE}" > "traffic_data/top_paths_${DATE}.json"
-            curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}?per=day&timestamp=${DATE}" > "traffic_data/top_referrers_${DATE}.json"
-            curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}?per=day&timestamp=${DATE}" > "traffic_data/views_${DATE}.json"
+          for repo in ${{ matrix.repo_name }}; do
+            mkdir -p "$repo"
+            cd "$repo"
+            for i in {0..13}; do
+              DATE=$(date -d "$i days ago" +%Y-%m-%d)
+              API_URL_CLONES="https://api.github.com/repos/$repo/traffic/clones?per=day&timestamp=${DATE}"
+              API_URL_TOP_PATHS="https://api.github.com/repos/$repo/traffic/popular/paths?per=day&timestamp=${DATE}"
+              API_URL_TOP_REFERRERS="https://api.github.com/repos/$repo/traffic/popular/referrers?per=day&timestamp=${DATE}"
+              API_URL_VIEWS="https://api.github.com/repos/$repo/traffic/views?per=day&timestamp=${DATE}"
+              curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}" > "clones_${DATE}.json"
+              curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}" > "top_paths_${DATE}.json"
+              curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}" > "top_referrers_${DATE}.json"
+              curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}" > "views_${DATE}.json"
+            done
+            cd ..
           done
 
-      
-      - name: Debug - Check contents of traffic_data directory
+      - name: Debug - Check contents of current directory
         run: |
-          ls
-          ls -l traffic_data
-          # cat traffic_data/*.json # Very Verbose. Keep commented unless debugging.
-      
-      # Github Commit Changed Files
-      # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html#git-commands
+          ls -lR
+
       - name: GIT commit and push docs
-        env: 
-          CI_COMMIT_MESSAGE: "Add Traffic Data on $(date +%Y-%m-%d)"
+        if: success() # Only run if previous steps are successful
+        env:
+          CI_COMMIT_MESSAGE: "Add Traffic Data for ${{ matrix.repo_name }} on $(date +%Y-%m-%d)"
           CI_COMMIT_AUTHOR: taylanu
         run: |
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "${{ env.CI_COMMIT_AUTHOR }}@users.noreply.github.com"
+          git config --global advice.addIgnoredFile false  # Ensure untracked files are added
+
+          # Pull Latest Remote
+          git pull origin main
+
           # Check if there are changes
-          if git diff --quiet; then
-            echo "No changes to commit."
-          else
-            git add traffic_data
+          if git status --porcelain | grep .; then
+            git add .
             git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-            git push
+            git push origin main # push to remote
+          else
+            echo "No changes to commit."
           fi
+
+# name: Fetch GitHub Traffic Data - taylanu (Self + Repo)
+
+# on:
+#   schedule:
+#     # - cron: '0 0 * * *'  # Runs every day at midnight UTC
+#     - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   fetch-traffic:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+
+#       - name: Check contents of current directory
+#         run: ls
+
+#       - name: Fetch traffic data
+#         id: traffic
+#         run: |
+#           API_URL_CLONES="https://api.github.com/repos/${{ github.repository }}/traffic/clones"
+#           API_URL_TOP_PATHS="https://api.github.com/repos/${{ github.repository }}/traffic/popular/paths"
+#           API_URL_TOP_REFERRERS="https://api.github.com/repos/${{ github.repository }}/traffic/popular/referrers"
+#           API_URL_VIEWS="https://api.github.com/repos/${{ github.repository }}/traffic/views"
+#           AUTH_HEADER="Authorization: token ${{ secrets.PAT }}"
+#           mkdir -p traffic_data
+#           # curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}" > traffic_data/clones.json
+#           # curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}" > traffic_data/top_paths.json
+#           # curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}" > traffic_data/top_referrers.json
+#           # curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}" > traffic_data/views.json
+#           # For the past 14 days, write a file with Date Timestamp
+#           for i in {0..13}; do
+#             DATE=$(date -d "$i days ago" +%Y-%m-%d)
+#             curl -sSL -H "${AUTH_HEADER}" "${API_URL_CLONES}?per=day&timestamp=${DATE}" > "traffic_data/clones_${DATE}.json"
+#             curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_PATHS}?per=day&timestamp=${DATE}" > "traffic_data/top_paths_${DATE}.json"
+#             curl -sSL -H "${AUTH_HEADER}" "${API_URL_TOP_REFERRERS}?per=day&timestamp=${DATE}" > "traffic_data/top_referrers_${DATE}.json"
+#             curl -sSL -H "${AUTH_HEADER}" "${API_URL_VIEWS}?per=day&timestamp=${DATE}" > "traffic_data/views_${DATE}.json"
+#           done
+
+      
+#       - name: Debug - Check contents of traffic_data directory
+#         run: |
+#           ls
+#           ls -l traffic_data
+#           # cat traffic_data/*.json # Very Verbose. Keep commented unless debugging.
+      
+#       # Github Commit Changed Files
+#       # https://joht.github.io/johtizen/build/2022/01/20/github-actions-push-into-repository.html#git-commands
+#       - name: GIT commit and push docs
+#         env: 
+#           CI_COMMIT_MESSAGE: "Add Traffic Data on $(date +%Y-%m-%d)"
+#           CI_COMMIT_AUTHOR: taylanu
+#         run: |
+#           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+#           git config --global user.email "${{ env.CI_COMMIT_AUTHOR }}@users.noreply.github.com"
+#           # Check if there are changes
+#           if git diff --quiet; then
+#             echo "No changes to commit."
+#           else
+#             git add traffic_data
+#             git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
+#             git push
+#           fi
 
       # - name: Commit and push changes
       #   uses: ad-m/github-push-action@v0.8.0
